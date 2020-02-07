@@ -8,59 +8,178 @@
   
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/brands.css" integrity="sha384-+2AYGyI2bR10NExh4Lu/3NQmpNxck8EcRE7aATrMi9QQ9OAKQAQw1bcrlWkp0tdM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/fontawesome.css" integrity="sha384-C1VkjHy10mh0wo7rz2xEDdqrfn5C+AJpaCpUyScFHzKb0mnAU3I//2RrdAE+LfQ6" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  Try it free
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <a href="/" title="Huddle">
+          <img src="./images/logo.svg" alt="Huddle logo" class="logo__img">
+        </a>
+      </div>
+      <div class="button button_bordered">
+        <a href="/mock-address/change-me" class="button__text">Try it free</a>
+      </div>
+    </div>
+  </header>
 
-  Build The Community Your Fans Will Love
+  <section class="intro">
+    <div class="container flex-column">
+      <h1 class="heading heading_h1">Build The Community Your Fans Will Love</h1>
+      <p class="intro__text">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
+      <div class="button button_cta">
+        <a href="/mock-address/change-me" class="button__text">Get Started For Free</a>
+      </div>
+      <img src="./images/screen-mockups.svg" alt="screen-mockups" class="intro__img">
+    </div>
+  </section>
 
-  Huddle re-imagines the way we build communities. You have a voice, but so does 
-  your audience. Create connections with your users as you engage in genuine discussion. 
+  <section class="stats">
+    <div class="container flex-row stats__container">
+      <div class="stats-card">
+        <div class="stats-card__icon-wrapper">
+          <img src="./images/icon-communities.svg" alt="icon-communities" class="stats-card__icon">
+        </div>
+        <div class="stats-card__value">1.4k+</div>
+        <div class="stats-card__text">Communities Formed</div>
+      </div>
+      <div class="stats-card">
+        <div class="stats-card__icon-wrapper">
+          <img src="./images/icon-messages.svg" alt="icon-messages" class="stats-card__icon stats-card__icon_messages">
+        </div>
+        <div class="stats-card__value">2.7m+</div>
+        <div class="stats-card__text">Messages Sent</div>
+      </div>
+    </div>
+  </section>
 
-  Get Started For Free
+  <section class="info info_bgr_pale-blue">
+    <div class="wave wave_mobile">
+      <img src="./images/bg-section-top-mobile-1.svg" class="wave__img">
+    </div>
+    <div class="wave wave_desktop">
+      <img src="./images/bg-section-top-desktop-1.svg" class="wave__img">
+    </div>
 
-  1.4k+
-  Communities Formed
+    <div class="container flex-row flex-row_reversed info__container info__container_1">
+      <div class="info__content">
+        <img src="./images/illustration-grow-together.svg" alt="illustration-grow-together" class="info__img">
+      </div>
+      <div class="info__content">
+        <h2 class="heading heading_h2">Grow Together</h2>
+        <p class="info__text">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+      </div>
+    </div>
 
-  2.7m+
-  Messages Sent
+    <div class="wave wave_mobile">
+      <img src="./images/bg-section-bottom-mobile-1.svg" class="wave__img">
+    </div>
+    <div class="wave wave_desktop">
+      <img src="./images/bg-section-bottom-desktop-1.svg" class="wave__img">
+    </div>
+  </section>
 
-  Grow Together
-  Generate meaningful discussions with your audience and build a strong, loyal community. 
-  Think of the insightful conversations you miss out on with a feedback form. 
+  <section class="info">
+    <div class="container flex-row info__container info__container_2">
+      <div class="info__content">
+        <img src="./images/illustration-flowing-conversation.svg" alt="illustration-flowing-conversation" class="info__img">
+      </div>
+      <div class="info__content">
+        <h2 class="heading heading_h2">Flowing Conversations</h2>
+        <p class="info__text">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+      </div>
+    </div>
+  </section>
 
-  Flowing Conversations
-  You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
-  just-in-time loading for a more natural flow.
+  <section class="info info_bgr_pale-blue">
+    <div class="wave wave_mobile">
+      <img src="./images/bg-section-top-mobile-2.svg" class="wave__img">
+    </div>
+    <div class="wave wave_desktop">
+      <img src="./images/bg-section-top-desktop-2.svg" class="wave__img">
+    </div>
 
-  Your Users
-  It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
-  once signed in to your app, your users can start chatting immediately.
+    <div class="container flex-row flex-row_reversed info__container info__container_3">
+      <div class="info__content">
+        <img src="./images/illustration-your-users.svg" alt="illustration-your-users" class="info__img">
+      </div>
+      <div class="info__content">
+        <h2 class="heading heading_h2">Your Users</h2>
+        <p class="info__text">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+      </div>
+    </div>
 
-  Ready To Build Your Community?
-  Get Started For Free
+    <div class="wave wave_mobile">
+      <img src="./images/bg-section-bottom-mobile-2.svg" class="wave__img">
+    </div>
+    <div class="wave wave_desktop">
+      <img src="./images/bg-section-bottom-desktop-2.svg" class="wave__img">
+    </div>
+  </section>
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia 
-  vestibulum a, ultrices quis sem.
-  
-  Phone: +1-543-123-4567
-  example@huddle.com
+  <section class="cta">
+    <div class="conatiner flex-column">
+      <h2 class="heading heading_h2">Ready To Build Your Community?</h2>
+      <div class="button button_cta">
+        <a href="/mock-address/change-me" class="button__text">Get Started For Free</a>
+      </div>
+    </div>
+  </section>
 
-  Newsletter
-  To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
-  send you spam or pass on your email address
+  <footer class="footer">
+    <div class="wave wave_mobile">
+      <img src="./images/bg-footer-top-mobile.svg" class="wave__img">
+    </div>
+    <div class="wave wave_desktop">
+      <img src="./images/bg-footer-top-desktop.svg" class="wave__img">
+    </div>
 
-  Subscribe
+    <div class="container footer__container flex-row">
+      <div class="footer__content">
+        <div class="logo">
+          <a href="/" title="Huddle">
+            <img src="./images/logo.svg" alt="Huddle logo" class="logo__img logo__img_inverted">
+          </a>
+        </div>
+        <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.</p>
+        <ul class="contact-info">
+          <li class="contact-info__item">
+            Phone: <a href="tel:+1-543-123-4567" class="footer__link">+1-543-123-4567</a>
+          </li>
+          <li class="contact-info__item">
+            <a href="mailto:example@huddle.com" class="footer__link">example@huddle.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__content">
+        <h3 class="heading heading_h3">Newsletter</h3>
+        <p class="footer__text">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
+        <form action="/mock-address/change-me" class="form flex-row">
+          <input type="email" name="user-email" class="form__input">
+          <input type="submit" value="Subscribe" class="button form__button">
+        </form>
+      </div>
+    </div>
 
-  <footer>
+    <div class="container flex-row socials">
+      <a href="https://facebook.com" target="_blank" class="socials__link footer__link">
+        <span class="fab fa-facebook-square"></span>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="socials__link footer__link">
+        <span class="fab fa-instagram"></span>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="socials__link footer__link">
+        <span class="fab fa-twitter-square"></span>
+      </a>
+    </div>
+
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="attribution__link">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/ksenius" class="attribution__link">@ksenius</a>.
     </p>
   </footer>
 </body>
