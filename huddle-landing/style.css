@@ -119,6 +119,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: 0.4s;
+  box-shadow: 0 0.1rem 0.5rem 0 rgba(0, 37, 46, 0.15);
 }
 .button:hover {
   transform: translateY(-0.3rem);
@@ -137,6 +138,7 @@ body {
   font-size: 2rem;
   height: 6.4rem;
   border-radius: 4rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 37, 46, 0.15);
   min-width: 32rem;
 }
 @media (min-width: 1000px) {
