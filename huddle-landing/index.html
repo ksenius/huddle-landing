@@ -59,10 +59,10 @@
 
   <section class="feature feature_bgr_pale-blue">
     <div class="wave wave_mobile">
-      <img src="./images/bg-section-top-mobile-1.svg" class="wave__img">
+      <img src="./images/bg-section-top-mobile-1.svg" alt="" class="wave__img">
     </div>
     <div class="wave wave_desktop">
-      <img src="./images/bg-section-top-desktop-1.svg" class="wave__img">
+      <img src="./images/bg-section-top-desktop-1.svg" alt="" class="wave__img">
     </div>
 
     <div class="container flex-row flex-row_reversed feature__container feature__container_1">
@@ -76,10 +76,10 @@
     </div>
 
     <div class="wave wave_mobile">
-      <img src="./images/bg-section-bottom-mobile-1.svg" class="wave__img">
+      <img src="./images/bg-section-bottom-mobile-1.svg" alt="" class="wave__img">
     </div>
     <div class="wave wave_desktop">
-      <img src="./images/bg-section-bottom-desktop-1.svg" class="wave__img">
+      <img src="./images/bg-section-bottom-desktop-1.svg" alt="" class="wave__img">
     </div>
   </section>
 
@@ -97,10 +97,10 @@
 
   <section class="feature feature_bgr_pale-blue">
     <div class="wave wave_mobile">
-      <img src="./images/bg-section-top-mobile-2.svg" class="wave__img">
+      <img src="./images/bg-section-top-mobile-2.svg" alt="" class="wave__img">
     </div>
     <div class="wave wave_desktop">
-      <img src="./images/bg-section-top-desktop-2.svg" class="wave__img">
+      <img src="./images/bg-section-top-desktop-2.svg" alt="" class="wave__img">
     </div>
 
     <div class="container flex-row flex-row_reversed feature__container feature__container_3">
@@ -114,10 +114,10 @@
     </div>
 
     <div class="wave wave_mobile">
-      <img src="./images/bg-section-bottom-mobile-2.svg" class="wave__img">
+      <img src="./images/bg-section-bottom-mobile-2.svg" alt="" class="wave__img">
     </div>
     <div class="wave wave_desktop">
-      <img src="./images/bg-section-bottom-desktop-2.svg" class="wave__img">
+      <img src="./images/bg-section-bottom-desktop-2.svg" alt="" class="wave__img">
     </div>
   </section>
 
@@ -132,10 +132,10 @@
 
   <footer class="footer">
     <div class="wave wave_mobile">
-      <img src="./images/bg-footer-top-mobile.svg" class="wave__img">
+      <img src="./images/bg-footer-top-mobile.svg" alt="" class="wave__img">
     </div>
     <div class="wave wave_desktop">
-      <img src="./images/bg-footer-top-desktop.svg" class="wave__img">
+      <img src="./images/bg-footer-top-desktop.svg" alt="" class="wave__img">
     </div>
 
     <div class="container footer__container flex-row">
@@ -161,7 +161,8 @@
         <h3 class="heading heading_h3">Newsletter</h3>
         <p class="footer__text footer__text_form-description">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
         <form action="/mock-address/change-me" method="post" name="Subscription" class="form flex-row footer__form">
-          <input type="email" name="user-email" class="form__input" required>
+          <label for="user-email" class="screen-reader">User email</label>
+          <input type="email" id="user-email" class="form__input" required>
           <input type="submit" value="Subscribe" class="button form__button">
         </form>
       </div>
@@ -169,13 +170,16 @@
 
     <div class="container socials">
       <a href="/mock-address/change-me" target="_blank" class="socials__link footer__link">
-        <span class="fab fa-facebook-square"></span>
+        <span class="fab fa-facebook-square" aria-hidden="true"></span>
+        <span class="screen-reader">Facebook</span>
       </a>
       <a href="/mock-address/change-me" target="_blank" class="socials__link footer__link">
-        <span class="fab fa-instagram"></span>
+        <span class="fab fa-instagram" aria-hidden="true"></span>
+        <span class="screen-reader">Instagram</span>
       </a>
       <a href="/mock-address/change-me" target="_blank" class="socials__link footer__link">
-        <span class="fab fa-twitter-square"></span>
+        <span class="fab fa-twitter-square" aria-hidden="true"></span>
+        <span class="screen-reader">Twitter</span>
       </a>
     </div>
 

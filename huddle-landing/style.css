@@ -24,6 +24,17 @@ body {
   }
 }
 
+.screen-reader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  border: 0;
+  padding: 0;
+}
+
 .heading {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -436,7 +447,7 @@ body {
 .form__input {
   font: inherit;
   height: 4.8rem;
-  border: 0;
+  border: 1px solid #ffffff;
   border-radius: 0.5rem;
   padding: 0 1.5rem;
   box-sizing: border-box;
@@ -451,6 +462,9 @@ body {
     margin-right: 4rem;
     margin-bottom: 0;
   }
+}
+.form__input:focus {
+  border: 2px solid #00cbfb;
 }
 .form__button {
   height: 4.8rem;
