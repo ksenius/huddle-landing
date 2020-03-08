@@ -26,6 +26,9 @@ const paths = {
   images: {
     src: './src/images/*.*',
     dest: './build/images'
+  },
+  iconFont: {
+    dest: './build/webfonts'
   }
 }
 
@@ -68,9 +71,7 @@ function scssTask() {
 }
 
 function jsLibsTask() {
-  return src([
-    'node_modules/svgxuse/svgxuse.min.js'
-  ])
+  return src(['node_modules/svgxuse/svgxuse.min.js'])
     .pipe(gp.concat('vendor.min.js'))
     .pipe(dest(paths.js.dest));
 }
@@ -79,6 +80,12 @@ function imagesTask() {
   return src(paths.images.src)
     .pipe(dest(paths.images.dest))
     .on('end', browserSync.reload);
+}
+
+function iconFontTask() {
+  return src(
+    'node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-*'
+    ).pipe(dest(paths.iconFont.dest));
 }
 
 function watchTask() {
@@ -96,10 +103,10 @@ function syncTask() {
 }
 
 exports.default = series(clean,
-  parallel(htmlTask, scssTask, jsLibsTask, imagesTask),
+  parallel(htmlTask, scssTask, jsLibsTask, imagesTask, iconFontTask),
   parallel(watchTask, syncTask)
 );
 
 exports.prod = series(clean,
-  series(htmlTask, scssTask, jsLibsTask, imagesTask)
+  series(htmlTask, scssTask, jsLibsTask, imagesTask, iconFontTask)
 );
