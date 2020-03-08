@@ -1,4 +1,5 @@
-# fm-challenges
-Some of the Frontend Mentor challenges.
+# Huddle landing page
 
-- [Huddle landing page with curved sections](https://ksenius.github.io/fm-challenges/huddle-landing/index.html)
+Frontend Mentor challenge solution: Responsive landing page using CSS flexbox.
+
+[Live Preview](https://huddle-landing-eight.now.sh/) · [Solution Page](https://www.frontendmentor.io/solutions/huddle-landing-with-curved-sections-O1UOpIKv)
