@@ -214,6 +214,10 @@ body {
   padding: 9rem 0 8rem;
 
   @include desktop-sm {
+    padding: 12rem 0 5rem;
+  }
+
+  @include desktop-lg {
     padding: 15.3rem 0 5rem;
   }
 
@@ -235,9 +239,17 @@ body {
     display: block;
     margin-top: 13rem;
 
+    @include tablet {
+      max-width: 600px;
+    }
+
     @include desktop-sm {
-      max-width: 1035px;
+      max-width: 760px;
       margin-top: 11rem;
+    }
+
+    @include desktop-lg {
+      max-width: 1035px;
     }
   }
 }
@@ -246,8 +258,12 @@ body {
 .stats {
   padding: 5rem 0 5rem;
 
+  @include tablet {
+    padding-bottom: 10rem;
+  }
+
   @include desktop-sm {
-    padding: 6.9rem 0 13.7rem;
+    padding: 6.9rem 0 13.9rem;
   }
 
   &__container {
@@ -421,7 +437,7 @@ body {
       padding: 10rem 0 8rem;
 
       @include desktop-sm {
-        padding: 7rem 3.2rem 3.9rem 1rem;
+        padding: 7rem 3.2rem 4.5rem 1rem;
       }
     }
 
@@ -429,7 +445,11 @@ body {
       padding: 18rem 0 15rem;
 
       @include desktop-sm {
-        padding: 20.2rem 0.5rem 11rem 1.5rem;
+        padding: 13rem 0.5rem 11.6rem 1.8rem;
+      }
+
+      @include desktop-lg {
+        padding-top: 20.2rem;
       }
     }
 
@@ -437,7 +457,7 @@ body {
       padding: 5rem 0 12rem;
 
       @include desktop-sm {
-        padding: 5.2rem 1.4rem 3.7rem 0;
+        padding: 5.2rem 2rem 4.4rem 0;
       }
     }
   }
@@ -477,14 +497,14 @@ body {
 
 .cta {
   text-align: center;
-  padding: 6rem 0 20rem;
+  padding: 6rem 0 18rem;
 
-  @include desktop-sm {
+  @include tablet {
     padding: 16.2rem 0 17.8rem;
   }
 
   &__button {
-    margin-top: 3.9rem;
+    margin-top: 3.8rem;
   }
 }
 
@@ -570,7 +590,7 @@ body {
   }
 
   &__form {
-    margin-top: 3.9rem;
+    margin-top: 4rem;
   }
 }
 
