@@ -20,9 +20,6 @@ const paths = {
     src: './src/scss/**/*.scss',
     dest: './build/css'
   },
-  js: {
-    dest: './build/js'
-  },
   images: {
     src: './src/images/*.*',
     dest: './build/images'
@@ -70,12 +67,6 @@ function scssTask() {
     .pipe(browserSync.stream());
 }
 
-function jsLibsTask() {
-  return src(['node_modules/svgxuse/svgxuse.min.js'])
-    .pipe(gp.concat('vendor.min.js'))
-    .pipe(dest(paths.js.dest));
-}
-
 function imagesTask() {
   return src(paths.images.src)
     .pipe(dest(paths.images.dest))
@@ -103,10 +94,10 @@ function syncTask() {
 }
 
 exports.default = series(clean,
-  parallel(htmlTask, scssTask, jsLibsTask, imagesTask, iconFontTask),
+  parallel(htmlTask, scssTask, imagesTask, iconFontTask),
   parallel(watchTask, syncTask)
 );
 
 exports.prod = series(clean,
-  series(htmlTask, scssTask, jsLibsTask, imagesTask, iconFontTask)
+  series(htmlTask, scssTask, imagesTask, iconFontTask)
 );
