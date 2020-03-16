@@ -1,5 +1,4 @@
 @import './helpers/variables';
-
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
 
@@ -9,7 +8,7 @@
 html {
   font-size: 8px;
 
-  @include desktop-sm() {
+  @include desktop-sm {
     font-size: 10px;
   }
 }
@@ -24,7 +23,7 @@ body {
   background: #fff;
   overflow-x: hidden;
 
-  @include desktop-sm() {
+  @include desktop-sm {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
@@ -50,7 +49,7 @@ body {
   &_h1 {
     font-size: 3.6rem;
 
-    @include desktop-sm() {
+    @include desktop-sm {
       font-size: 4.8rem;
     }
   }
@@ -58,7 +57,7 @@ body {
   &_h2 {
     font-size: 3rem;
 
-    @include desktop-sm() {
+    @include desktop-sm {
       font-size: 4rem;
     }
   }
@@ -72,14 +71,11 @@ body {
 // Container
 .container {
   width: calc(100% - 6rem);
+  max-width: 1200px;
   margin: 0 auto;
 
-  @include desktop-sm() {
-    width: calc(100% - 10rem);
-  }
-
-  @include desktop-lg() {
-    max-width: 1200px;
+  @include tablet {
+    width: calc(100% - 8rem);
   }
 }
 
@@ -89,7 +85,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  @include desktop-sm() {
+  @include tablet {
     flex-direction: row;
     justify-content: space-between;
 
@@ -97,12 +93,20 @@ body {
       flex-direction: row-reverse;
     }
   }
+
+  &__item {
+    max-width: 100%;
+  }
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__item {
+    max-width: 100%;
+  }
 }
 
 // Logo
@@ -127,7 +131,7 @@ body {
   border: 1px solid $pink;
   box-sizing: border-box;
   padding: 0 3rem;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -159,7 +163,7 @@ body {
     box-shadow: 0 0.5rem 1rem 0 rgba($dark-cyan, 0.15);
     min-width: 32rem;
 
-    @include desktop-sm() {
+    @include desktop-sm {
       height: 8rem;
       min-width: 40rem;
     }
@@ -209,27 +213,30 @@ body {
   text-align: center;
   padding: 9rem 0 8rem;
 
-  @include desktop-sm() {
+  @include desktop-sm {
     padding: 15.3rem 0 5rem;
   }
 
   &__text {
     font-size: 2rem;
     line-height: 3rem;
+    width: 100%;
     max-width: 59rem;
     margin: 3rem 0 5rem;
 
-    @include desktop-sm() {
+    @include desktop-sm {
       margin: 2.2rem 0 4.7rem;
     }
   }
 
   &__img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
     display: block;
     margin-top: 13rem;
 
-    @include desktop-sm() {
+    @include desktop-sm {
+      max-width: 1035px;
       margin-top: 11rem;
     }
   }
@@ -239,12 +246,12 @@ body {
 .stats {
   padding: 5rem 0 5rem;
 
-  @include desktop-sm() {
+  @include desktop-sm {
     padding: 6.9rem 0 13.7rem;
   }
 
   &__container {
-    @include desktop-sm() {
+    @include tablet {
       justify-content: space-around;
     }
   }
@@ -253,7 +260,7 @@ body {
     &:not(:last-child) {
       margin-bottom: 15rem;
 
-      @include desktop-sm() {
+      @include tablet {
         margin-bottom: 0;
       }
     }
@@ -263,25 +270,32 @@ body {
 .stats-card {
   max-width: 25rem;
 
-  &__icon-wrapper {
-    height: 4.1rem;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4.2rem;
+    background-repeat: no-repeat;
   }
 
-  &__icon {
-    margin-left: 0.4rem;
+  &_communities::before {
+    background-image: url("../images/icon-communities.svg");
+    background-size: contain;
+    background-position: 0.4rem 0;
+  }
 
-    &_messages {
-      margin-top: 0.3rem;
-      margin-left: 0.8rem;
-      height: 3.3rem;
-    }
+  &_messages::before {
+    background-image: url("../images/icon-messages.svg");
+    background-size: 4rem auto;
+    background-position: 0 0.3rem;
+    margin-left: 0.9rem;
   }
 
   &__value {
     font-weight: 700;
     font-size: 9.5rem;
     line-height: 1;
-    margin: 1.5rem 0 3.5rem;
+    margin: 1.5rem 0 3.2rem;
   }
 
   &__text {
@@ -293,12 +307,8 @@ body {
 
 // Wave
 .wave {
-  background: #fff;
-
-  &__img {
-    width: 100%;
-    display: block;
-  }
+  background-color: #fff;
+  background-repeat: no-repeat;
 
   &_desktop {
     display: none;
@@ -318,7 +328,90 @@ body {
 // Info section
 .feature {
   &_bgr_pale-blue {
-    background: $pale-blue;
+    background-color: $pale-blue;
+  }
+
+  &__top-wave-1 {
+    background-image: url("../images/bg-section-top-mobile-1.svg");
+    background-size: 100% 112px;
+    height: 112px;
+
+    @include tablet {
+      background-image: url("../images/bg-section-top-desktop-1.svg");
+      background-size: 100% 80px;
+      height: 80px;
+    }
+
+    @include desktop-sm {
+      background-size: 100% 120px;
+      height: 120px;
+    }
+
+    @include desktop-lg {
+      background-size: 100% 165px;
+      height: 165px;
+    }
+  }
+
+  &__bottom-wave-1 {
+    background-image: url("../images/bg-section-bottom-mobile-1.svg");
+    background-size: 100% 52px;
+    height: 52px;
+
+    @include tablet {
+      background-image: url("../images/bg-section-bottom-desktop-1.svg");
+      background-size: 100% 80px;
+      height: 80px;
+    }
+
+    @include desktop-sm {
+      background-size: 100% 139px;
+      height: 139px;
+    }
+  }
+
+  &__top-wave-2 {
+    background-image: url("../images/bg-section-top-mobile-2.svg");
+    background-size: 100% 103px;
+    height: 103px;
+
+    @include tablet {
+      background-image: url("../images/bg-section-top-desktop-2.svg");
+      background-size: 100% 80px;
+      height: 80px;
+    }
+
+    @include desktop-sm {
+      background-size: 100% 120px;
+      height: 120px;
+    }
+
+    @include desktop-lg {
+      background-size: 100% 156px;
+      height: 156px;
+    }
+  }
+
+  &__bottom-wave-2 {
+    background-image: url("../images/bg-section-bottom-mobile-2.svg");
+    background-size: 100% 101px;
+    height: 101px;
+
+    @include tablet {
+      background-image: url("../images/bg-section-bottom-desktop-2.svg");
+      background-size: 100% 70px;
+      height: 70px;
+    }
+
+    @include desktop-sm {
+      background-size: 100% 110px;
+      height: 110px;
+    }
+
+    @include desktop-lg {
+      background-size: 100% 139px;
+      height: 139px;
+    }
   }
 
   &__container {
@@ -327,7 +420,7 @@ body {
     &_1 {
       padding: 10rem 0 8rem;
 
-      @include desktop-sm() {
+      @include desktop-sm {
         padding: 7rem 3.2rem 3.9rem 1rem;
       }
     }
@@ -335,7 +428,7 @@ body {
     &_2 {
       padding: 18rem 0 15rem;
 
-      @include desktop-sm() {
+      @include desktop-sm {
         padding: 20.2rem 0.5rem 11rem 1.5rem;
       }
     }
@@ -343,16 +436,18 @@ body {
     &_3 {
       padding: 5rem 0 12rem;
 
-      @include desktop-sm() {
+      @include desktop-sm {
         padding: 5.2rem 1.4rem 3.7rem 0;
       }
     }
   }
 
   &__img {
-    max-width: 80%;
+    width: 100%;
+    max-width: 500px;
+    display: block;
 
-    @include desktop-sm() {
+    @include desktop-sm {
       max-width: 100%;
     }
   }
@@ -360,7 +455,7 @@ body {
   &__content {
     text-align: center;
 
-    @include desktop-sm() {
+    @include tablet {
       text-align: left;
       flex-basis: calc(50% - 2rem);
       max-width: 51.5rem;
@@ -369,7 +464,7 @@ body {
     &:last-child {
       margin-top: 7rem;
 
-      @include desktop-sm() {
+      @include desktop-sm {
         margin-top: 0;
       }
     }
@@ -384,7 +479,7 @@ body {
   text-align: center;
   padding: 6rem 0 20rem;
 
-  @include desktop-sm() {
+  @include desktop-sm {
     padding: 16.2rem 0 17.8rem;
   }
 
@@ -398,6 +493,28 @@ body {
   color: $pale-blue;
   padding-bottom: 10rem;
   position: relative;
+
+  &__wave {
+    background-image: url("../images/bg-footer-top-mobile.svg");
+    background-size: 100% 53px;
+    height: 53px;
+
+    @include tablet {
+      background-image: url("../images/bg-footer-top-desktop.svg");
+      background-size: 100% 70px;
+      height: 70px;
+    }
+
+    @include desktop-sm {
+      background-size: 100% 100px;
+      height: 100px;
+    }
+
+    @include desktop-lg {
+      background-size: 100% 158px;
+      height: 158px;
+    }
+  }
 
   &__logo {
     height: 3.9rem;
@@ -417,14 +534,14 @@ body {
     flex-direction: column-reverse;
     padding-top: 5rem;
 
-    @include desktop-sm() {
+    @include tablet {
       flex-direction: row;
       padding-top: 12.2rem;
     }
   }
 
   &__content {
-    @include desktop-sm() {
+    @include tablet {
       flex-basis: calc(50% - 2rem);
       align-self: flex-start;
       max-width: 52rem;
@@ -433,7 +550,7 @@ body {
     &:last-child {
       margin-bottom: 10rem;
 
-      @include desktop-sm() {
+      @include tablet {
         margin-bottom: 0;
       }
     }
@@ -442,7 +559,7 @@ body {
   &__text {
     margin: 2.5rem 0;
 
-    @include desktop-sm() {
+    @include desktop-sm {
       font-size: 1.4rem;
       max-width: 33rem;
     }
@@ -464,6 +581,7 @@ body {
 
   &__item {
     display: flex;
+    align-items: center;
 
     &:not(:last-child) {
       margin-bottom: 1.5rem;
@@ -496,7 +614,7 @@ body {
   &__input {
     font: inherit;
     height: 4.8rem;
-    border: 1px solid #fff;
+    border: 0.2rem solid #fff;
     border-radius: 0.5rem;
     padding: 0 1.5rem;
     box-sizing: border-box;
@@ -504,15 +622,15 @@ body {
     width: 100%;
     margin-bottom: 1.5rem;
 
-    @include desktop-sm() {
-      width: auto;
-      flex-grow: 2.5;
+    @include tablet {
+      width: 100%;
+      max-width: 32rem;
       margin-right: 4rem;
       margin-bottom: 0;
     }
 
     &:focus {
-      border: 2px solid #00cbfb;
+      border: 0.2rem solid #00cbfb;
     }
   }
 
@@ -525,9 +643,9 @@ body {
     }
     width: 50%;
 
-    @include desktop-sm() {
+    @include tablet {
       width: auto;
-      flex-grow: 0.5;
+      flex-grow: 1;
     }
   }
 }
@@ -540,6 +658,10 @@ body {
     display: block;
     font-size: 3.6rem;
     margin-right: 2.5rem;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
   }
 }
 
