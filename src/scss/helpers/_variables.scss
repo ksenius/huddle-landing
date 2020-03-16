@@ -4,6 +4,10 @@ $dark-cyan: hsl(192, 100%, 9%);
 $pale-blue: #f6fbff;
 
 // Breakpoints
+@mixin tablet {
+  @media (min-width: 768px) { @content; }
+}
+
 @mixin desktop-sm {
   @media (min-width: 1000px) { @content; }
 }
