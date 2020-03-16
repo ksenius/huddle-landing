@@ -11,15 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "svgxuse": "^1.2.6"
+    "@fortawesome/fontawesome-free": "^5.12.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
     "gulp-if": "^3.0.0",
     "gulp-load-plugins": "^2.0.2",
     "gulp-postcss": "^8.0.0",
